@@ -6,7 +6,7 @@ import CTAStyle from '../styles/CTAStyle';
 import wlotus from '../static/lotuswhite.png';
 import useServices from '../hooks/useServices';
 import backendApi from '../api/backendApi';
-import useRoomReserve from '../hooks/useRoomReserve';
+
 import styled from 'styled-components'; ///////
 const CTA = () => {
 	const warning = styled.div`
@@ -26,7 +26,7 @@ const CTA = () => {
 	const [pickedRoom, setpickedRoom] = useState('');
 	const [showMessage, setshowMessage] = useState('');
 	const [occupencyWarning, setoccupencyWarning] = useState('');
-	const [roomReserve, roomReserveApi] = useRoomReserve();
+
 	const validateForm = () =>
 		firstName !== '' &&
 		lastName !== '' &&
@@ -38,16 +38,6 @@ const CTA = () => {
 
 	const SubmitHandler = () => {
 		if (validateForm()) {
-			roomReserveApi({
-				firstName,
-				lastName,
-				checkIn,
-				checkOut,
-				program,
-				pickedRoom,
-				people,
-				comment,
-			});
 			setfirstName('');
 			setlastName('');
 			setprogram('');
@@ -206,6 +196,14 @@ const CTA = () => {
 									programType: program,
 									programs: programs,
 									services: services,
+									firstName,
+									lastName,
+									checkIn,
+									checkOut,
+									program,
+									pickedRoom,
+									people,
+									comment,
 								},
 							}}
 						>

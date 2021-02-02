@@ -4,6 +4,15 @@ import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 const Services = (props) => {
+	const{firstName,
+		lastName,
+		checkIn,
+		checkOut,
+		program,
+		pickedRoom,
+		people,
+		comment,}=props.location.state;
+
 	const programs = props.location.state.programs;
 
 	const services = props.location.state.services;
@@ -71,6 +80,14 @@ const Services = (props) => {
 										pathname: `/checkout`,
 										state: {
 											totalAmount: totPrice,
+											firstName,
+											lastName,
+											checkIn,
+											checkOut,
+											program,
+											pickedRoom,
+											people,
+											comment,
 										},
 									}}
 								>
