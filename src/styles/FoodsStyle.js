@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const FoodsStyle = styled.div`
+    overflow: hidden;
     min-height: 70vh;
     padding: 3rem 0 3rem 0;
     width: 100%;

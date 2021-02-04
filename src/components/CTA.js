@@ -6,7 +6,7 @@ import CTAStyle from '../styles/CTAStyle';
 import wlotus from '../static/lotuswhite.png';
 import useServices from '../hooks/useServices';
 import backendApi from '../api/backendApi';
-
+import useRoomReserve from '../hooks/useRoomReserve';
 import styled from 'styled-components'; ///////
 const CTA = () => {
 	const warning = styled.div`
@@ -26,15 +26,12 @@ const CTA = () => {
 	const [pickedRoom, setpickedRoom] = useState('');
 	const [showMessage, setshowMessage] = useState('');
 	const [occupencyWarning, setoccupencyWarning] = useState('');
-
 	const validateForm = () =>
 		firstName !== '' &&
 		lastName !== '' &&
 		program !== '' &&
 		people !== '' &&
-		occupencyWarning === ''
-			? true
-			: false;
+		occupencyWarning === '';
 
 	const SubmitHandler = () => {
 		if (validateForm()) {
@@ -44,6 +41,7 @@ const CTA = () => {
 			setpickedRoom('');
 			setpeople('');
 			setcomment('');
+			console.log('filled correctly')
 		} else {
 			setshowMessage('please fill the form first with correct input');
 		}
@@ -55,8 +53,8 @@ const CTA = () => {
 		console.log({ availableRooms, pickedRoom, selectedRoom });
 		selectedRoom.capacity < people
 			? setoccupencyWarning(
-					`maximum capacity of the room is ${selectedRoom.capacity},please select another room or reduce no of people`
-			  )
+			`maximum capacity of the room is ${selectedRoom.capacity},please select another room or reduce no of people`
+			)
 			: setoccupencyWarning('');
 	};
 
@@ -196,14 +194,9 @@ const CTA = () => {
 									programType: program,
 									programs: programs,
 									services: services,
-									firstName,
-									lastName,
-									checkIn,
-									checkOut,
-									program,
-									pickedRoom,
-									people,
-									comment,
+									pickedRoom:pickedRoom,
+									checkIn: checkIn,
+									checkOut:checkOut,
 								},
 							}}
 						>

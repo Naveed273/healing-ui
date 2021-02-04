@@ -20,6 +20,34 @@ const FooterSrtyle = styled.footer`
     img{
         max-width: 70%;
     }
+    
+
+    @media only screen and (max-width: 992px) {
+        a{
+            text-decoration: none;
+            color: #656565;
+            font-weight: 300;
+            padding: 0.5rem 0 0.5rem 0;
+            cursor: pointer;
+        }
+        h5{
+            font-size: 24px;
+            font-weight: 600;
+        }
+        img{
+            max-width: 70%;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .mobile-not{
+            display: none !important;
+        }
+    }
+    @media only screen and (max-width: 568px) {
+        .mobile-not{
+            display: none !important;
+        }
+    }
 `;
 
 export default FooterSrtyle;

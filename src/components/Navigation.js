@@ -53,11 +53,6 @@ const Navigation = () => {
 								</li>
 								<li className='nav-item'>
 									<a className='nav-link ms-4' href='y.com'>
-										Accommodation & Fee
-									</a>
-								</li>
-								<li className='nav-item'>
-									<a className='nav-link ms-4' href='y.com'>
 										Nourishment
 									</a>
 								</li>

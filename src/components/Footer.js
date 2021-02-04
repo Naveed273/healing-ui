@@ -12,13 +12,13 @@ const Footer = () => {
           <FooterStyle >
             <div className="container">
             <div className="row d-flex justify-content-evenly align-middle">
-                <div className="col-lg-4">
+                <div className="col-lg-4 col-md-3">
                     <img src={logo} alt=""/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing  elit.  
                         Neque quae ad facere architecto placeat 
                         inventore eum.</p>
                     </div>
-                <div className="col-lg-2 d-flex flex-column">
+                <div className="col-lg-2 col-md-3 d-flex flex-column mobile-not">
                     <h5>Useful Links</h5>
 
                     <a href="y.com">About us</a>
@@ -27,7 +27,7 @@ const Footer = () => {
                     <a href="y.com">Photo Gallery</a>
                     <a href="y.com">Our Location</a>
                 </div>
-                <div className="col-lg-2 d-flex flex-column">
+                <div className="col-lg-2 col-md-3 d-flex flex-column mobile-not">
                 <h5>Useful Links</h5>
 
                 <a href="y.com">About us</a>
@@ -36,7 +36,7 @@ const Footer = () => {
                 <a href="y.com">Photo Gallery</a>
                 <a href="y.com">Our Location</a>
                 </div>
-                <div className="col-lg-2 d-flex flex-column">
+                <div className="col-lg-2 col-md-3 d-flex flex-column">
                 <h5>Socials</h5>    
                 <div> 
                    <a href="instagram.com"> <InstagramIcon className="m-2" /></a>
