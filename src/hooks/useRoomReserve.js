@@ -13,7 +13,7 @@ export default () => {
                 check_out: check_out,
             });
             setRoomReserve(response.data);
-            console.log({roomReserve})
+
         } catch (err) {
             setErrorMessage(err);
         }

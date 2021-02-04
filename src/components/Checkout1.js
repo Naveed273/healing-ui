@@ -27,7 +27,7 @@ export default function Checkout1(props) {
 
 	const [message, setMessage] = useState('');
     useEffect(() => {
-        console.log('useEffect called');
+
         
 		const query = new URLSearchParams(window.location.search);
 
